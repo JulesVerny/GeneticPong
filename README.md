@@ -1,21 +1,21 @@
 ## Pong Game Genetic Algorithm Learning ##
 Genetic Algorithm Based Learning for simple Pong PyGame.  This python based Pong Game (control of Left Hand Yellow Paddle against a programmed RHS Paddle)
 
-![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGame.PNG "Game Play")
+![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGameCapture.PNG "Game Play")
 
 The Objective is simply measured as successfully returning of the Ball by the Yellow Left Hand Agent, evolved from Genetic Algorithm.  
 The programmed opponent Right Hand Paddle player is a pretty hot player. So success is simply the  ability to return ball. 
 In this Interpration, Success is deemed when the Player is able to continues to return the Ball, without Missing for 500 Game Frames.
 The follwoing diagram demonstrates the evolution of the Score, through 30 Genetic Algorithm Epoch cycles. (Which is pretty fast, much faster and more Robust than Nueral Net Procesing !) 
 
-![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGALearning.png "Score growth")
+![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGALearning3.png "Score growth")
 
 The use of Genetic Algorithms and some Fuzzy Logic has been inspired from frustrations with Nueral Net Reinforcement processing being so slow, lack of robustness and lack of interpretation.  As with the other Pong Experiment below, this relies upon a capture of Ball and player positions. So it DOES NOT generalise as Convolutional Reinforcement learning methods have the advantage of.  
 The Paddle, Ball positions and Direction are passded into a Fuzzy Logic Interetation (Or basic Binning) so as to map into Genome Based Rules Table. The advantage of Fuzzy Logic (and Genetic Algorith Development) is that it allows the developed Genomes rules to be Human Readable, Interpreted and Reviewable. This is  major advantage over Nueral network based solutions which are effectively Black Box. 
 
 The Genomes can either be displayed either in a Flat Genome String Sequence Structure or laid out in a Tabular Structure.  The Tabular Strcuture ie easily interepeted by humans.  See the example below, halfway through the Training. 
 
-![alt text](https://github.com/JulesVerny/GeneticPongg/blob/master/Evolution.png "Score growth")
+![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/Evolution.PNG "CLI Output")
 This shows the Console Output part way through evolution, with the Best Genome Displayed in a Tabular Format and the Population of Genomes displayed as a set of Genome sequences with their scores. The Populations shows the Top most Genome is already achieved Optimum perfomance (500), with the other Genomes (Mutated, Children, Random) not perfoming quite so well.
 
 A review of the Best Genome in Tabular format (at the conclusion of the Training Epochs) can be compared against an intuitive understanding of the optimum Pong Player perfomance. Basically the Paddle should move U (up) when the Paddle is Below the Ball and Paddle should move D (Down) when Pddle is Above the Ball. This is particularly critical when the Ball is moving Left towards the Player Paddle. The Paddle Action when Moving Right, is not so critical, as the AI has enough time to to respond, waiting for the Ball to be returned. When the Paddle is at the 'same' height as the ball, it does not need to do any action 'S' (Same)  
