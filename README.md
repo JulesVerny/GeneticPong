@@ -8,7 +8,7 @@ The programmed opponent Right Hand Paddle player is a pretty hot player. So succ
 In this Interpration, Success is deemed when the Player is able to continues to return the Ball, without Missing for 500 Game Frames.
 The follwoing diagram demonstrates the evolution of the Score, through 30 Genetic Algorithm Epoch cycles. (Which is pretty fast, much faster and more Robust than Nueral Net Procesing !) 
 
-![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGALearning3.png "Score growth")
+![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/PongGAlearning3.png "Score growth")
 
 The use of Genetic Algorithms and some Fuzzy Logic has been inspired from frustrations with Nueral Net Reinforcement processing being so slow, lack of robustness and lack of interpretation.  As with the other Pong Experiment below, this relies upon a capture of Ball and player positions. So it DOES NOT generalise as Convolutional Reinforcement learning methods have the advantage of.  
 The Paddle, Ball positions and Direction are passded into a Fuzzy Logic Interetation (Or basic Binning) so as to map into Genome Based Rules Table. The advantage of Fuzzy Logic (and Genetic Algorith Development) is that it allows the developed Genomes rules to be Human Readable, Interpreted and Reviewable. This is  major advantage over Nueral network based solutions which are effectively Black Box. 
