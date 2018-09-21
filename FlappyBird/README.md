@@ -5,7 +5,7 @@ Genetic Algorithm Based Learning for simple Flappy Bird PyGame.  This python bas
 The Objective is simply measured as staying alive, and getting through as many pipes as possible. This is also evolved from Genetic Algorithm.  
  
 In this Interpration, Success is deemed when the Player is able to continues to return Fly the Bird fpor a max of 1250 Game Frames.
-The following diagram demonstrates the evolution of the Score, through 100 Evolution Epochs. Tyhe Initial Population performs poorly by hitting the first pipe around 52 Frames.  The final Population achieves near optimum perforance, but is rather erratic.  
+The following diagram demonstrates the evolution of the Score, through 100 Evolution Epochs. Tyhe Initial Population performs poorly by hitting the first pipe around 52 Frames.  The final Population achieves near optimum perforance, but is rather erratic.
 ![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/FlappyBird/EvolvedScore100.png "Score growth")
 
 The use of Genetic Algorithms and some Fuzzy Logic has been inspired from frustrations with Nueral Net Reinforcement processing being so slow, lack of robustness and lack of interpretation.  As with the other Pong Experiment below, this relies upon a capture of Ball and player positions. So it DOES NOT generalise as Convolutional Reinforcement learning methods have the advantage of.  
