@@ -48,5 +48,10 @@ https://github.com/JulesVerny/PongConvolutionalDQN
 and  and Explcit Nueral network based upon  Game Paramters Ball Postion, and Player Position
 https://github.com/JulesVerny/PongReinforcementLearning
 
+
+## Flappy Bird ###
+Please look into the Flappy Bird Sub Directory for an Example of the same Approach used for Flappy Bird Game.  Not so Successful
+
+
 ### Acknowledgments: ###
 * The  Pong Game Code is based upon Siraj Raval's inspiring vidoes on Machine learning and Reinforcement Learning [ Which does employ full convolutional DQN example]:   https://github.com/llSourcell/pong_neural_network_live
