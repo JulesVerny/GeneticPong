@@ -13,17 +13,17 @@ The Paddle, Ball positions and Direction are passded into a Fuzzy Logic Intereta
 
 The Genomes can either be displayed either in a Flat Genome String Sequence Structure or laid out in a Tabular Structure.  The Tabular Strcuture ie easily interepeted by humans.  See the example below, halfway through the Training. 
 ![alt text](https://github.com/JulesVerny/GeneticPong/blob/master/FlappyBird/FinalGenome100.PNG "CLI Output")
-This shows the Console Output part way through evolution, with the Best Genome Displayed in a Tabular Format and the Population of Genomes displayed as a set of Genome sequences with their scores. The Populations shows the Top most Genome is already achieved Optimum perfomance (1250), with the other Genomes (Mutated, Children, Random) not perfoming quite so well.
+This shows the Console Output part way through evolution, with the Best Genome Displayed in a Tabular Format and the Population of Genomes displayed as a set of Genome sequences with their scores. The Populations shows the Top most Genome is already achieved Optimum perfomance (1250), with the other Genomes (Mutated, Children, Random) not performing quite so well.
 
-A review of the Best Genome in Tabular format (at the conclusion of the Training Epochs) can be compared against an intuitive understanding of the optimum Pong Player perfomance. 
-Basically we would expect the Bird to only Flap, if it is Falling, and getting close to the pipes.  Otherwise would not wish to See Flap 
-The Fuzzy Logic input (controls) are based upon distance to middle of next pipe gap (Farm Med, Near, Close, Very Close and Between)  and whther the bird is above or below the next Pipe Gap point( Very Above, Above, Just Above, Same. Just below, Below and very Below)
+The Fuzzy Logic input (controls) are based upon distance to middle of next pipe gap (Far, Med, Near, Close, Very Close and Between)  and whether the bird is above or below the next Pipe Gap point( Very Above, Above, Just Above, Same. Just below, Below and very Below)
 The Output controls are to Flap [F] or Not to Flap [N] 
+A review of the Best Genome in Tabular format (at the conclusion of the Training Epochs) can be compared against an intuitive understanding of the optimum Flappy Bird performance.  Basically we would expect the Bird to only Flap, only if it is already Falling, and getting close to the Pipes.  Otherwise would not wish to See Flap (unless some very below, and close nd lready rising) 
+
 
 ### Useage ###
 python TrainFlappyBirds.py
 
-This main Training runs through a Population of 14 x FlappyGenomes, and resorts and releselects the best Genomes at each Epoch, based upon the scores acehievd for each Genome in the population.  A Total of only 100 Epochs appears to be needed to train the Population, and evolve reasonable perfomance growth.
+This the main Training executable which  runs through a Population of 14 x FlappyGenomes, and resorts and releselects the best Genomes at each Epoch, based upon the scores acehievd for each Genome in the population.  A Total of only 100 Epochs appears to be needed to train the Population, and evolve some reasonable perfomance growth.
 
 The Genetic Algorithm choice selections (following a sorted population) are as follows :
 - Keep Top Two Scoring Genomes in the Population [0,1]   - Also noting to potentially replace the top [0] entry with the Best Ever Genome    
@@ -34,16 +34,12 @@ The Genetic Algorithm choice selections (following a sorted population) are as f
 
 This new Population is then reevaluated by playing through the game for Genome of the Population and capturing the Frame Score Count (Number of Frames played, until the Bird Strikes a Pipe) for each.  
 
-### Supporting Classes ###
-The Genome class describes the Genome methods:  Genetic Modifications and CLI Display methods  : 
-FlappyGenome.py
-
-The Py Game based Pong Game is:  
-FlappyBirdGame.py
-This is Based upon Flappy Game used in Convolutional Learning examples in from 
+### Supporting Files ###
+- FlappyGenome.py: The Genome class describes the Genome methods:  Genetic Modifications and CLI Display methods  
+- FlappyBirdGame.py:  The Py Game based Pong Game is This is Based upon Flappy Game used in Convolutional Learning examples in from 
 https://github.com/yanpanlau/Keras-FlappyBird
-
-ExplicitBird.Py is a Main Executable, which is used to set up an intuitive optimum Genome, so as to compare performance and the evolved  Genomes against.  
+- ExplicitBird.Py is a Main Executabl.  This is used to set up and exercise an intuitive optimum Genome, so as to compare performance and the evolved  Genomes against. (As described above the Genome typically Flpas, when Bird is dropping, and is Below the next Gap Point.) 
+- ProcessGenome - Main Executable Test code just used to check the Genome processing code.  
 
 
 
